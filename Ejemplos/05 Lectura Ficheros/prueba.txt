@@ -1,0 +1,8 @@
+Node.js es un entorno de ejecución de Javascript open source para construir 
+principalmente aplicaciones del lado del servidor. Node.js es básicamente 
+una plataforma de desarrollo similar a .NET de Microsoft, compuesto por un ecosistema 
+completo de librerías, utilidades y múltiples características que nos apoyan a la hora de desarrollar.
+
+Node.js fue creado por Ryan Dahl en el año 2009 en Joyen, pero al pasar los años, 
+poco a poco, el proyecto fue adquiriendo independencia y colaboración de la comunidad, 
+hasta el punto de llegar a ser auspiciado por la fundación Linux.
