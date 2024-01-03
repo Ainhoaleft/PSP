@@ -1,8 +1,8 @@
 const path = require('path');
 
-function obtenerContentType(nombreArchivo) {
+function obtenerContentType(ext) {
 
-    const extension = path.extname(nombreArchivo);
+    const extension = path.extname(ext);
 
     const tiposMime = {
         '.html': 'text/html',
@@ -13,7 +13,7 @@ function obtenerContentType(nombreArchivo) {
     
     };
 
-    return tiposMime[extension] || 'application/octet-stream';
+    return tiposMime[ext] || 'application/octet-stream';
 }
 
 module.exports = obtenerContentType;

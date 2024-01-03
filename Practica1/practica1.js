@@ -1,7 +1,7 @@
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
-const obtenerContentType = require("./mi_modulo");
+const obtenerContentType = require('./mi_modulo');
 var url = require('url');
 
 const requestListener = function (request, response){
@@ -44,7 +44,7 @@ const requestListener = function (request, response){
     let ct = obtenerContentType(ext);
     console.log(ct);
 
-    response.setHeader("Content-Type", 'text/html');
+    response.setHeader("Content-Type", ct);
     response.writeHead(200);
     response.write(data);
     response.end();
