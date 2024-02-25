@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "be96cc24-e6dc-4f54-b3ef-ac0d4bcc846d",
+		"name": "Pilotos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32926417"
+	},
+	"item": [
+		{
+			"name": "A. Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pilotos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pilotos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "B. Get ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pilotos/65db5ddaab77ca0c89c2306d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pilotos",
+						"65db5ddaab77ca0c89c2306d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "C. Get busquedas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pilotos/busqueda?nombre=Fernando Alonso&minAnyos=42",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pilotos",
+						"busqueda"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "Fernando Alonso"
+						},
+						{
+							"key": "minAnyos",
+							"value": "42"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "D. Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"escuderia\": \"Alpine\",\r\n    \"nombre\": [\"Noa\"],\r\n    \"anyos\": 22\r\n  },\r\n  {\r\n    \"escuderia\": \"Haas\",\r\n    \"nombre\": [\"Ainhoa\"],\r\n    \"anyos\": 23\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pilotos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pilotos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "E. Actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"escuderia\": \"Haas\",\r\n    \"nombre\": [\"Ainhoa\"],\r\n    \"anyos\": 25\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pilotos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pilotos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "F. Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pilotos/65db5faeab77ca0c89c23081",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pilotos",
+						"65db5faeab77ca0c89c23081"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
