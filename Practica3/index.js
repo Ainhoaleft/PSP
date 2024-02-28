@@ -25,20 +25,6 @@ app.get('/pilotos', (req, res) => {
     })
 });
 
-// B. Obtener un documento por su ID
-app.get('/pilotos/:id', (req, res) => {     
-    Piloto.findById(req.params.id)
-        .then(Piloto => {
-            if (!Piloto) {
-                return res.status(404).json({ message: 'Piloto no encontrado' });
-            }
-            res.status(200).json(Piloto);
-        })
-        .catch(error => {
-            res.status(500).json({ error: error.message });
-        });
-});
-
 // C. Obtener todos los documentos que cumplan dos condiciones
 app.get('/pilotos/busqueda', (req, res) => {
     let query = {};
@@ -68,6 +54,22 @@ app.post('/pilotos', async (req, res) => {
       res.status(500).json({ error: error.message });
     }
 });
+
+// B. Obtener un documento por su ID
+app.get('/pilotos/:id', (req, res) => {     
+    Piloto.findById(req.params.id)
+        .then(Piloto => {
+            if (!Piloto) {
+                return res.status(404).json({ message: 'Piloto no encontrado' });
+            }
+            res.status(200).json(Piloto);
+        })
+        .catch(error => {
+            res.status(500).json({ error: error.message });
+        });
+});
+
+
 
     // E. Actualizar un documento dada una condición
     app.put('/pilotos', (req, res) => {
